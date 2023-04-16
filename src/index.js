@@ -32,7 +32,6 @@ const updateUi = (data) => {
     if(card.classList.contains('card-modal')) {
         card.classList.remove('card-modal');
     }
-
 }
 
 const updateCity = async (city) => {
@@ -51,5 +50,14 @@ cityForm.addEventListener('submit', e => {
     cityForm.reset();
     updateCity(city)
         .then(data => updateUi(data))
-        .catch(error => alert(error))
+        .catch(error => alert(error));
+
+    // set local storage
+    localStorage.setItem('city', city);
 })
+
+if(localStorage.getItem('city')) {
+    updateCity(localStorage.getItem('city'))
+        .then(data => updateUi(data))
+        .catch(error => console.log(error))
+}
