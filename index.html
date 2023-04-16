@@ -8,6 +8,35 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-    <h1>Weather App</h1>
+    <header>
+        <h1>Weather App</h1>
+    </header>
+    <main>
+        <div class="container">
+
+            <form>
+                <label for="city"></label>
+                <input type="text" name="city" id="city" placeholder="Enter city for weather information">
+            </form>
+            
+            <div class="card">
+                <img src="https://placehold.co/400x300" alt="" class="time">
+                <div class="icon">
+                    <!-- weather icon -->
+                </div>
+                <div class="details">
+                    <h5>CITY NAME</h5>
+                    <div class="weather-condition">
+                        WEATHER CONDITION
+                    </div>
+                    <div class="temp">
+                        <span>TEMP</span>
+                        <span>&deg;C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
 </body>
 </html>
