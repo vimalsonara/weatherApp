@@ -84,3 +84,7 @@ input:focus {
   margin: 25px 0;
   font-size: 2rem;
 }
+
+img {
+  width: 400px;
+}
